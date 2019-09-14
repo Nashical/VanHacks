@@ -56,12 +56,12 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    return render_template('public/templates/pages/index.html')
+    return render_template('index.html')
 
 
 @app.route('/about')
 def about():
-    return render_template('public/templates/pages/placeholder.about.html')
+    return render_template('about.html')
 
 '''
 @app.errorhandler(500)
@@ -76,7 +76,7 @@ def not_found_error(error):
 '''
 
 if not app.debug:
-    file_handler = FileHandler('public/error.log')
+    file_handler = FileHandler('error.log')
     file_handler.setFormatter(
         Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]')
     )
@@ -91,7 +91,7 @@ if not app.debug:
 
 def new_event():
     if request.method == "GET":
-        return render_template('public/templates/pages/placeholder.about.html')
+        return render_template('about.html')
     else:
         new_event = dict(request.form)
         db.child("Info").push(new_event) #replaces appending to events variable with firebase db call.
