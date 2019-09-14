@@ -3,11 +3,12 @@
 #----------------------------------------------------------------------------#
 
 from flask import Flask, render_template, request
-# from flask.ext.sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
 from forms import *
 import os
+
+import pyrebase
 
 #----------------------------------------------------------------------------#
 # App Config.
@@ -15,7 +16,19 @@ import os
 
 app = Flask(__name__)
 app.config.from_object('config')
-#db = SQLAlchemy(app)
+
+config = {
+  "apiKey": 'AIzaSyBZ5RZu3KDt8qiUIEO-z_FG2sa47zjSpYY',
+  "authDomain": "vanhacks-2019.firebaseapp.com",
+  "databaseURL": "https://vanhacks-2019.firebaseio.com",
+  "projectId": "vanhacks-2019",
+  "storageBucket": "vanhacks-2019.appspot.com",
+  "serviceAccount": "firebase-private-key.json",
+  "messagingSenderId": "45900005724"
+}
+
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
 
 # Automatically tear down SQLAlchemy.
 '''
@@ -43,43 +56,24 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    return render_template('public/pages/index.html')
+    return render_template('public/templates/pages/index.html')
 
 
 @app.route('/about')
 def about():
-    return render_template('public/pages/placeholder.about.html')
+    return render_template('public/templates/pages/placeholder.about.html')
 
-
-@app.route('/login')
-def login():
-    form = LoginForm(request.form)
-    return render_template('public/forms/login.html', form=form)
-
-
-@app.route('/register')
-def register():
-    form = RegisterForm(request.form)
-    return render_template('public/forms/register.html', form=form)
-
-
-@app.route('/forgot')
-def forgot():
-    form = ForgotForm(request.form)
-    return render_template('public/forms/forgot.html', form=form)
-
-# Error handlers.
-
-
+'''
 @app.errorhandler(500)
 def internal_error(error):
     #db_session.rollback()
-    return render_template('public/errors/500.html'), 500
+    return render_template('public/templates/errors/500.html'), 500
 
 
 @app.errorhandler(404)
 def not_found_error(error):
-    return render_template('public/errors/404.html'), 404
+    return render_template('public/templates/errors/404.html'), 404
+'''
 
 if not app.debug:
     file_handler = FileHandler('public/error.log')
@@ -90,6 +84,18 @@ if not app.debug:
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
     app.logger.info('errors')
+
+#----------------------------------------------------------------------------#
+# Functions.
+#----------------------------------------------------------------------------#
+
+def new_event():
+    if request.method == "GET":
+        return render_template('public/templates/pages/placeholder.about.html')
+    else:
+        new_event = dict(request.form)
+        db.child("Info").push(new_event) #replaces appending to events variable with firebase db call.
+        return redirect('/')
 
 #----------------------------------------------------------------------------#
 # Launch.
