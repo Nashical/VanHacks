@@ -2,22 +2,6 @@
 
 ## Welcome
 
-Hello. Want to get started with Flask quickly? Good. You came to the right place. This Flask application framework is pre-configured with **Flask-SQLAlchemy**, **Flask-WTF**, **Fabric**, **Coverage**, and the **Bootstrap** frontend (among others). This will get your Flask app up and running on Heroku or PythonAnywhere quickly. Use this starter, boilerplate for all you new Flask projects. Cheers!
-
-<hr>
-
-![real-python-logo](https://raw.githubusercontent.com/realpython/about/master/rp_small.png)
-
-**Designed for the [Real Python](http://www.realpython.com) course.**
-
-<hr>
-
-Preview the skeleton app here - [http://www.flaskboilerplate.com/](http://www.flaskboilerplate.com/)
-
-**EXAMPLE APP: [http://flasktaskr.herokuapp.com/](http://flasktaskr.herokuapp.com/)**
-
-**What is Flask?** Flask is a microframework for Python based on Werkzeug and Jinja2.
-
 Project Structure
 --------
 
@@ -84,33 +68,6 @@ Project Structure
 ![Pages](https://github.com/realpython/flask-boilerplate/blob/master/screenshots/pages.png)
 
 ![Forms](https://github.com/realpython/flask-boilerplate/blob/master/screenshots/forms.png)
-
-
-### Quick Start
-
-1. Clone the repo
-  ```
-  $ git clone https://github.com/realpython/flask-boilerplate.git
-  $ cd flask-boilerplate
-  ```
-
-2. Initialize and activate a virtualenv:
-  ```
-  $ virtualenv --no-site-packages env
-  $ source env/bin/activate
-  ```
-
-3. Install the dependencies:
-  ```
-  $ pip install -r requirements.txt
-  ```
-
-5. Run the development server:
-  ```
-  $ python app.py
-  ```
-
-6. Navigate to [http://localhost:5000](http://localhost:5000)
 
 
 Deploying to Heroku
