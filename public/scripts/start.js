@@ -12,6 +12,5 @@ function start() {
     }
       
     audio.play();
-    document.getElementById("dialog").innerHTML = intro;
     diagInit();
   }

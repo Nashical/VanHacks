@@ -1,38 +1,37 @@
-//var date = updateDate(initDate);
-//var money = updateBal(initMoney);
+var Date = updateDate(initDate);
+var money = 1000;
 var index = 0;
 
-var diagtext,opt1text,opt2text;
+var initPrompt = intro;
+var initOp1 = op1[0];
+var initOp2 = op2[0];
 
 
-//var initOp1 = op1[0].toString();
-//var initOp2 = op2[0].toString();
 
 function diagInit(){
-    diagtext = document.getElementById("dialog").innerHTML;
-    opt1text = document.getElementById("balance").innerHTML;
-    opt2text = document.getElementById("balance").innerHTML;
+    updateBal(0);
+    document.getElementById("option1button").innerHTML = initOp1;
+    document.getElementById("option2button").innerHTML = initOp2;
+    document.getElementById("dialog").innerHTML = initPrompt;
 }
-
-/*
 function updatePrompt(ind){
-    document.getElementById("dialog").innerHTML = prom[ind].toString();
+    document.getElementById("dialog").innerHTML = prom[ind];
 }
 
 function updateOption1(text) {
-    document.getElementById("option1button").innerHTML = text.toString();
+    document.getElementById("option1button").innerHTML = text;
 }
 
 function updateOption2(text) {
-    document.getElementById("option2button").innerHTML = text.toString();
+    document.getElementById("option2button").innerHTML = text;
 }
 
 function updateBal(amount) {
-    document.getElementById("balance").innerHTML = ("$" + (money + amount)).toString();
+    document.getElementById("balance").innerHTML = "$" + (money + amount);
 }
 
 function updateDate(day){
-    document.getElementById("date").innerHTML = ("Day " + day).toString();
+    document.getElementById("date").innerHTML = "Day " + day;
 }
 
 function changeOp1() {
@@ -62,5 +61,9 @@ function changeOp2() {
         updateOption2(op2[index]);
     }
 }
+function checkLoss(money){
+    if (money <= 0){
 
-*/
+    }
+
+}
