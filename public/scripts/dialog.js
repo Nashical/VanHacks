@@ -1,4 +1,3 @@
-var initMoney = 1000;
 var initDate = 1;
 
 var intro = "You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.";

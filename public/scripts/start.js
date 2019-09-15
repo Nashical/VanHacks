@@ -12,5 +12,6 @@ function start() {
     }
       
     audio.play();
-    diagInit()
+
+    diagInit();
   }
