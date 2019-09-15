@@ -14,3 +14,14 @@ function start() {
     audio.play();
     diagInit();
   }
+
+  function end(){
+      var x = document.getElementById("endbg");
+      var y = document.getElementById("result");
+      var z = document.getElementById("enddisc");
+
+      x.style.display = "block";
+      y.style.display = "block";
+      z.style.display = "block";
+
+  }

@@ -1,26 +1,27 @@
-var initDate = 1;
+var initDate = 0;
 
 var intro = "You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.";
 
-var op1 = ["In order to have enough money on hand to pay your rent you have to make sure you have $200 left in your bank account at the end of the month.  Let's assume you've been successful at that this month.",
+var op1 = ["Okay",
+    "In order to have enough money on hand to pay your rent you have to make sure you have $400 left in your bank account at the end of the month.  Let's assume you've been successful at that this month.",
     "You choose to work a full time minimum wage job at a local fast food place.  You work daytime hours, Monday to Friday, 7am to 3pm.  Your pre-tax, annual gross income from employment is $28,808. By-weekly that income is $1,008.  After tax, each bi-weekly paycheque is $880.00",
-    "Your former spouse is not able to pay you any of his owed child support this month.",
     "",
+    "Next",
     "You rent a 1 bedroom basement suite in Vancouver, within walking distance of your work and your kids school.  Your children share the bedroom while you sleep on a futon in the living room.",
     "Next",
-    "You own a used car, a 1999 Ford Escape.  Because you live so close to work, you don't drive it more than a few km per week for groceries and errands.  You do make one longer trip per week ot Abbotsford for Sunday dinner with your parents.  You pay your insurance monthly and it's due later in the month, but you need today.",
     "",
+    "You own a used car, a 1999 Ford Escape.  Because you live so close to work, you don't drive it more than a few km per week for groceries and errands.  You do make one longer trip per week ot Abbotsford for Sunday dinner with your parents.  You pay your insurance monthly and it's due later in the month, but you need today.",
     "Next",
     "You choose to pay for internet at home.",
     "Next"
 ];
 
-var bal1 = [200.00,
+var bal1 = [0,
+    400.00,
     880.00,
     0,
-    0,
-    -1300.00,
-    100.00,
+    -800.00,
+    880.00,
     -20.00,
     0,
     880.00,
@@ -28,38 +29,44 @@ var bal1 = [200.00,
     -475.00
 ];
 
-var op2 = ["In order to have enough money on hand to pay your rent you have to make sure you have $400 left in your bank account at the end of the month.  Let's assume you've been successful at that this month.",
+var op2 = ["Okay",
+    "In order to have enough money on hand to pay your rent you have to make sure you have $600 left in your bank account at the end of the month.  Let's assume you've been successful at that this month.",
     "You choose to apply for student loans and work 25 hours per week at a $20/hour office job.  You take 2 classes per semester at a local University to upgrade your education amd eventually your earning potential.  After tax, your bi-weekly pay is $880.  Your student loans cover your tuition costs but not your books or other school supplies.",
-    "Your former spouse is only able to give you $300 of the $464 he owes in child support for the month.  He promises to pay the rest after his next paycheque.",
     "",
+    "Next",
     "You rent a 2 bedroom apartment in North Burnaby, a 40 minute drive from your work.  Your children share one bedroom and you have the other.",
     "Next",
-    "Dinner at your parents house in Abbotsford.  Because you don't own a car, your dad drives in to pick you up.  You give him $20 for gas.",
     "",
+    "Dinner at your parents house in Abbotsford.  Because you don't own a car, your dad drives in to pick you up.  You give him $20 for gas.",
     "Next",
     "You choose to not have internet at home but spend more on your cellphone so you have a better data plan.  Your bill is due.",
     "Next"
 ];
 
-var bal2 = [400.00,
+var bal2 = [0,
+    600.00,
     880.00,
-    300.00,
-    -1500.00,
+    0,
     100.00,
+    -1000.00,
+    880.00,
     -20.00,
+    0,
     880.00,
     -110.00,
     -475.00
 ];
 
 var prom = ["",
-    "",
-    "",
+    "You need to save some money, but how much?",
+    "You have to find a job to support your living, which one do you choose?",
     "",
     "After rent, you have $0 left in your bank account until your next paycheque.  You take out a $100 payday loan so you can buy groceries for the week.",
-    "",
+    "You need a place to move to that suits your needs, which place do you choose?",
     "Payday!",
     "",
+    "You have to go out tonight, what do you do?",
+    "You need some sort of wireless network, which one do you choose?",
     "Childcare fees are due tomorrow.  You have one child in full time care ($1250/month) and one in before and after school care ($650/month).  You get subsidy from the government for $1425, but still have to pay $475 each month.",
 ];
 
@@ -88,7 +95,8 @@ var costs = [-80,
 function accident(text, values){
     var rand = Math.floor(Math.random() * (+text.length - +0)) + +0;
     updatePrompt(text[rand]);
-    updateBal(values[rand]);
+    money = money + values[rand];
+    updateDate(index)
     updateOption1("Next");
     updateOption2("Next");
 }

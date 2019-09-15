@@ -14,8 +14,8 @@ function diagInit(){
     document.getElementById("option2button").innerHTML = initOp2;
     document.getElementById("dialog").innerHTML = initPrompt;
 }
-function updatePrompt(ind){
-    document.getElementById("dialog").innerHTML = prom[ind];
+function updatePrompt(text){
+    document.getElementById("dialog").innerHTML = text;
 }
 
 function updateOption1(text) {
@@ -28,6 +28,7 @@ function updateOption2(text) {
 
 function updateBal(amount) {
     document.getElementById("balance").innerHTML = "$" + (money + amount);
+    money = money + amount;
 }
 
 function updateDate(day){
@@ -36,34 +37,50 @@ function updateDate(day){
 
 function changeOp1() {
     index = index + 1;
-    if (index == 4 || index == 8){
+    if (index == 3 || index == 7){
         accident(accidents, costs);
     }
     else{
-        updatePrompt(index);
-        updateBal(bal1[index]);
-        updateDate(index + 1);
+        updatePrompt(prom[index]);
+        updateBal(bal1[index-1]);
+        updateDate(index);
         updateOption1(op1[index]);
         updateOption2(op2[index]);
     }
+    checkLoss(money);
+    checkWin(Date);
 }
 
 function changeOp2() {
     index = index + 1;
-    if (index == 4 || index == 8){
+    if (index == 3 || index == 7){
         accident(accidents, costs);
     }
+
     else{
-        updatePrompt(index);
-        updateBal(bal2[index]);
-        updateDate(index + 1);
+        updatePrompt(prom[index]);
+        updateBal(bal2[index-1]);
+        updateDate(index);
         updateOption1(op1[index]);
         updateOption2(op2[index]);
     }
+    checkLoss(money);
+    checkWin(Date);
 }
+
 function checkLoss(money){
     if (money <= 0){
+        end();
+        document.getElementById("result").innerHTML = "You Lose!";
+        document.getElementById("enddisc").innerHTML = "Your savings drop below $0 and you fall into debt.<br>Your Savings: $" + money + "<br>Days survived: " + (index + 1);
+    }
+}
 
+function checkWin() {
+    if (Date >= prompt.length-1){
+        end();
+        document.getElementById("result").innerHTML = "You Win!";
+        document.getElementById("enddisc").innerHTML = "You have made great choices throughout the month and both you and your children survive!";
     }
 
 }
