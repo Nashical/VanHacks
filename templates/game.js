@@ -1,25 +1,37 @@
 'use strict';
 
-const e = React.createElement;
+const main = React.createElement;
 
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
+class Background extends React.Component {
+    render() {
 
-  render() {
-    if (this.state.liked) {
-      return 'Do yu know da wae.';
+        return(
+        <img src={require('assets/bg0.jpg')}/>
+    
+        );
     }
+}
 
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+class Game extends React.Component {
+  render() {
+
+    return(
+        <div className="gameContainer">
+            <div className="background">
+                <Background />
+            </div>
+            <div className="sprite">
+            </div>
+            <div className="overlay">
+            </div>
+            <div className="interactive">
+            </div>
+            <div className="text">
+            </div>
+      </div>
     );
   }
 }
 
 const domContainer = document.querySelector('#game_container');
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(main(Game), domContainer);
