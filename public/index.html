@@ -3,27 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <title>Greater Vancouver Food Bank</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <script type="text/javascript" src="./game.js"></script>
     </head>
     <body>
         <div class="main">
-            <p id="date">1</p>
-            <p id="balance">$1000</p>
-            <p id="dialog">check</p>
-            <p id="option1"> </p>
-            <p id="option2"> </p>
 
-            <p id="currentbal"> </p>
-            <p id="deductions"> </p>
-            <p id="newbal"> </p>
+            <div class="text">
+                <p id="date">Day 1</p>
+                <p id="balance">$1000</p>
+                <p id="dialog"></p>
+                <p id="option1"></p>
+                <p id="option2"></p>
 
-            <h3 id="logo">Greater Vancouver Food Bank</h3>
-            
-            <div class="button">
-                <button onclick="op1()" id="option1button"></button>
-                <button onclick="op2()" id="option2button"></button>
-                <button onclick="start()" id="go"></button>
+                <p id="currentbal">Current Balance: $1000</p>
+                <p id="deductions">Deductions: $50</p>
+                <p id="newbal">New Balance: $950</p>
             </div>
+
+            <div class="button">
+                    <button onclick="op1()" id="option1button">giant penis</button>
+                    <button onclick="op2()" id="option2button">bigger penis</button>
+                </div>
+            
+            <h3 id="logo">Greater Vancouver Food Bank</h3>
+
+            <div class="background">
+                    <img id="background-main" src="bg.jpg">
+            </div> 
         </div>
     </body>
 </html>

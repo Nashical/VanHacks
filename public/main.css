@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-align: center;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#date{
+    position: absolute;
+    top:10%;
+    left:5%;
+}
+
+#balance{
+    position: absolute;
+    top:10%;
+    right:5%;
+}
+
+#dialog{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+#option1{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+}
+
+#option2{
+    position: absolute;
+    right:20%;
+    top:50%;
+}
+
+#currentbal{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+#deductions{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+#newbal{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+
+#logo{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+}
+
+#option1button{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 40%;
+    height: 25%;
+}
+
+#option2button{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 40%;
+    height: 25%;
+}
+
+#background-main{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+
