@@ -19,11 +19,69 @@ html, body{
     height: 100%;
 }
 
+#startlink{
+    position: absolute;
+    bottom:0%;
+    left:32.5%;
+    width: 35%;
+    height: 20%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    border: none;
+}
+
+#startbg{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#background-main{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+
+
+#startbutton{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+    top: 0%;
+    left: 0%;
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    border: none;
+}
+
+
 #date{
     position: absolute;
-    top:18%;
-    left:7%;
-    font-size: 300%;
+    top:13%;
+    left:7vw;
+    font-size: 4vw;
     text-align: center;
     display: inline-block;
     width: 6%;
@@ -31,9 +89,9 @@ html, body{
 
 #balance{
     position: absolute;
-    top:13%;
+    top:10%;
     right:7%;
-    font-size: 300%;
+    font-size: 4vw;
     text-align: center;
 }
 
@@ -46,24 +104,7 @@ html, body{
     width:45%;
     font-family: 'Indie Flower', cursive;
     color: white;
-}
-
-#currentbal{
-    position: absolute;
-    left: 50%;
-    top: 40%;
-}
-
-#deductions{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
-
-#newbal{
-    position: absolute;
-    left: 50%;
-    top: 60%;
+    font-size: 1.6vw;
 }
 
 #option1button{
@@ -72,11 +113,12 @@ html, body{
     left: 7%;
     width: 40%;
     height: 25%;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     background-color: rgba(195,60,60,0.7);
     border: none;
     color: white;
+    font-size: 1.2vw;
 }
 
 #option2button{
@@ -85,20 +127,12 @@ html, body{
     right: 7%;
     width: 40%;
     height: 25%;
-    font-family: 'Indie Flower', cursive;\
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     background-color: rgba(60,60,195,0.7);
     border: none;
     color: white;
-}
-
-#background-main{
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
+    font-size: 1.2vw;
 }
 
 
