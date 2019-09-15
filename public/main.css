@@ -10,6 +10,7 @@ html, body{
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: 'Fredoka One', cursive;
 }
 
 .main{
@@ -20,32 +21,31 @@ html, body{
 
 #date{
     position: absolute;
-    top:10%;
-    left:5%;
+    top:18%;
+    left:7%;
+    font-size: 300%;
+    text-align: center;
+    display: inline-block;
+    width: 6%;
 }
 
 #balance{
     position: absolute;
-    top:10%;
-    right:5%;
+    top:13%;
+    right:7%;
+    font-size: 300%;
+    text-align: center;
 }
 
 #dialog{
     position: absolute;
-    left: 50%;
-    top: 10%;
-}
-
-#option1{
-    position: absolute;
-    left: 20%;
-    top: 50%;
-}
-
-#option2{
-    position: absolute;
-    right:20%;
-    top:50%;
+    right:27%;
+    top: 8%;
+    text-align: center;
+    display: inline-block;
+    width:45%;
+    font-family: 'Indie Flower', cursive;
+    color: white;
 }
 
 #currentbal{
@@ -66,26 +66,30 @@ html, body{
     top: 60%;
 }
 
-#logo{
-    position: absolute;
-    bottom: 0;
-    left:50%;
-}
-
 #option1button{
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 7%;
     width: 40%;
     height: 25%;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+    background-color: rgba(195,60,60,0.7);
+    border: none;
+    color: white;
 }
 
 #option2button{
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 7%;
     width: 40%;
     height: 25%;
+    font-family: 'Indie Flower', cursive;\
+    text-decoration: none;
+    background-color: rgba(60,60,195,0.7);
+    border: none;
+    color: white;
 }
 
 #background-main{
