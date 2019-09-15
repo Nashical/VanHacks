@@ -3,27 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>Greater Vancouver Food Bank</title>
-        <script src="game.js"></script>
+        <script type="text/javascript" src="./game.js"></script>
     </head>
     <body>
         <div class="main">
-            <div class="header">
+            <p id="date">1</p>
+            <p id="balance">$1000</p>
+            <p id="dialog">check</p>
+            <p id="option1"> </p>
+            <p id="option2"> </p>
 
-            </div>
-            <div class="page">
+            <p id="currentbal"> </p>
+            <p id="deductions"> </p>
+            <p id="newbal"> </p>
 
-            </div>
-            <div class="game">
-
-                <div class="background">
-                    <img src="assets/bg0.jpg" alt="Food Bank Game">
-                </div>
-                <div class="buttons-game">
-                        
-                </div>
-                <div class="dialog text">
-                        
-                </div>
+            <h3 id="logo">Greater Vancouver Food Bank</h3>
+            
+            <div class="button">
+                <button onclick="op1()" id="option1button"></button>
+                <button onclick="op2()" id="option2button"></button>
+                <button onclick="start()" id="go"></button>
             </div>
         </div>
     </body>
