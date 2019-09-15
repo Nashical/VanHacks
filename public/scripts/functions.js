@@ -1,20 +1,20 @@
-var date = updateDate(initDate);
-var money = updateBal(initMoney);
+//var date = updateDate(initDate);
+//var money = updateBal(initMoney);
 var index = 0;
 
-var initPrompt = intro.toString();
-var initOp1 = op1[0].toString();
-var initOp2 = op2[0].toString();
+var diagtext,opt1text,opt2text;
+
+
+//var initOp1 = op1[0].toString();
+//var initOp2 = op2[0].toString();
 
 function diagInit(){
-    document.getElementById("balance").innerHTML = money.toString();
-    document.getElementById("date").innerHTML = date.toString();
-    document.getElementById("option1button").innerHTML = initOp1.toString();
-    document.getElementById("option2button").innerHTML = initOp2.toString();
-    document.getElementById("dialog").innerHTML = initPrompt.toString();
+    diagtext = document.getElementById("dialog").innerHTML;
+    opt1text = document.getElementById("balance").innerHTML;
+    opt2text = document.getElementById("balance").innerHTML;
 }
 
-
+/*
 function updatePrompt(ind){
     document.getElementById("dialog").innerHTML = prom[ind].toString();
 }
@@ -62,3 +62,5 @@ function changeOp2() {
         updateOption2(op2[index]);
     }
 }
+
+*/
