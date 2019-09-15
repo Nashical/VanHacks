@@ -77,7 +77,7 @@ function checkLoss(money){
 }
 
 function checkWin() {
-    if (Date >= prompt.length-1){
+    if (Date >= prom.length-1){
         end();
         document.getElementById("result").innerHTML = "You Win!";
         document.getElementById("enddisc").innerHTML = "You have made great choices throughout the month and both you and your children survive!";
