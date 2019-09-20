@@ -10,8 +10,8 @@ var initOp2 = op2[0];
 
 function diagInit(){
     updateBal(0);
-    document.getElementById("option1button").innerHTML = initOp1;
-    document.getElementById("option2button").innerHTML = initOp2;
+    document.getElementById("option1").innerHTML = initOp1;
+    document.getElementById("option2").innerHTML = initOp2;
     document.getElementById("dialog").innerHTML = initPrompt;
 }
 function updatePrompt(text){
@@ -19,11 +19,11 @@ function updatePrompt(text){
 }
 
 function updateOption1(text) {
-    document.getElementById("option1button").innerHTML = text;
+    document.getElementById("option1").innerHTML = text;
 }
 
 function updateOption2(text) {
-    document.getElementById("option2button").innerHTML = text;
+    document.getElementById("option2").innerHTML = text;
 }
 
 function updateBal(amount) {
