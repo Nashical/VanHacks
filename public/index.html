@@ -9,24 +9,49 @@
     </head>
     <body>
         <div class="main">
-            <div class="background">
+
+            <!-- Main Game -->
+
+            <div class="assets">
+
+                    <img id="assets-background" src="./assets/b_background.png">
+                    <img id="assets-character" src="./assets/b_character.png">
+                    <img id="assets-characterdialog" src="./assets/b_character.png">
+                    <img id="assets-dialog" src="./assets/b_dialog.png">
+                    <img id="assets-balance" src="./assets/b_balance.png">
+                    <img id="assets-date" src="./assets/b_date.png">
+
+                    <!--
+
                     <img id="background-main" src="./assets/bg0.png">
+                    <img id="background-main" src="./assets/bg0.png">
+
+                    -->
             </div>
+
             <div class="text">
                     <p id="date">0</p>
                     <p id="balance">$0</p>
-                <div class="option-main">
                     <p id="dialog">empty</p>
-                </div>
             </div>
-            <div class="button">
-                    <button onclick="changeOp1()" id="option1button">Test 1</button>
-                    <button onclick="changeOp2()" id="option2button">Test 2</button>
+
+
+            <button onclick="dialog()" id="dialog-button">Test Button for dialog</button>
+
+
+            <div class="option-button">
+                    <button onclick="changeOp1()" id="option1">Test 1</button>
+                    <button onclick="changeOp2()" id="option2">Test 2</button>
             </div>
+
+            <!-- Start Game -->
+
             <div class="startup">
                     <img id="startbg" src="./assets/Title.png">
                     <button onclick="start()" id ="startbutton">Link Starto!!</button>
             </div>
+
+            <!-- End Game -->
 
             <div class="end">
                     <img id="endbg" src="./assets/End.png">

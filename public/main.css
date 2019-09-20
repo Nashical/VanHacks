@@ -34,7 +34,7 @@ html, body{
     border: none;
 }
 
-#background-main{
+#assets-background{
     position: absolute;
     top:0%;
     left:0%;
@@ -46,6 +46,81 @@ html, body{
     background-size: 100%;
 }
 
+#assets-dialog{
+    position: absolute;
+    bottom: 5%;
+    left:10%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#assets-balance{
+    position: absolute;
+    top:3%;
+    right:3%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#assets-date{
+    position: absolute;
+    top:12%;
+    right:3%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#assets-character{
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    left: 3%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#assets-characterdialog{
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+}
+
+#date{
+    position: absolute;
+    top:2.1%;
+    right:5.5%;
+    font-size: 4vw;
+    text-align: center;
+    display: inline-block;
+}
+
+#balance{
+    position: absolute;
+    top:11.5%;
+    right:6%;
+    font-size: 4vw;
+    text-align: center;
+}
+
+#dialog{
+    position: absolute;
+    right:12.5%;
+    bottom: 17%;
+    text-align: center;
+    display: inline-block;
+    width:75%;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 1.6vw;
+}
 
 
 #result{
@@ -117,42 +192,32 @@ html, body{
 }
 
 
-#date{
-    position: absolute;
-    top:13%;
-    left:7vw;
-    font-size: 4vw;
-    text-align: center;
-    display: inline-block;
-    width: 6%;
-}
+/* Buttons */
 
-#balance{
+/*
+#dialog-button{
     position: absolute;
-    top:10%;
-    right:7%;
-    font-size: 4vw;
-    text-align: center;
-}
-
-#dialog{
-    position: absolute;
-    right:27%;
-    top: 8%;
-    text-align: center;
-    display: inline-block;
-    width:45%;
-    font-family: 'Indie Flower', cursive;
+    left: 10%;
+    width: 80%;
+    height: 155px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background-color: rgba(195,60,60,0.7);
+    border: none;
     color: white;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
+    padding:0.5vw;
+    bottom: 5%;
 }
+*/
 
-#option1button{
+
+.option-button button{
+
     position: absolute;
-    top: 50%;
-    left: 7%;
-    width: 40%;
-    height: 25%;
+    left: 30%;
+    width: 60%;
+    height: 100px;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     background-color: rgba(195,60,60,0.7);
@@ -162,19 +227,12 @@ html, body{
     padding:0.5vw;
 }
 
-#option2button{
-    position: absolute;
+#option1{
+    top: 30%;
+}
+
+#option2{
     top: 50%;
-    right: 7%;
-    width: 40%;
-    height: 25%;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    background-color: rgba(60,60,195,0.7);
-    border: none;
-    color: white;
-    font-size: 1.2vw;
-    padding:0.5vw;
 }
 
 
