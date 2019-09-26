@@ -18,7 +18,7 @@ var op1 = ["Okay",
 
 var bal1 = [0,
     400.00,
-    880.00,
+    0,
     0,
     -800.00,
     880.00,
@@ -31,7 +31,7 @@ var bal1 = [0,
 
 var op2 = ["Okay",
     "In order to have enough money on hand to pay your rent you have to make sure you have $600 left in your bank account at the end of the month.  Let's assume you've been successful at that this month.",
-    "You choose to apply for student loans and work 25 hours per week at a $20/hour office job.  You take 2 classes per semester at a local University to upgrade your education amd eventually your earning potential.  After tax, your bi-weekly pay is $880.  Your student loans cover your tuition costs but not your books or other school supplies.",
+    "You choose to apply for student loans and work 25 hours per week at a $20/hour office job.  You take 2 classes per semester at a local University to upgrade your education amd eventually your earning potential.  After tax, your bi-weekly pay is $800.  Your student loans cover your tuition costs but not your books or other school supplies.",
     "",
     "Next",
     "You rent a 2 bedroom apartment in North Burnaby, a 40 minute drive from your work.  Your children share one bedroom and you have the other.",
@@ -45,7 +45,7 @@ var op2 = ["Okay",
 
 var bal2 = [0,
     600.00,
-    880.00,
+    0,
     0,
     100.00,
     -1000.00,
@@ -105,7 +105,8 @@ function accident(text, values){
 
 //"Groceries.  Before you pay anything else you go shopping for groceries that will hopefully last a couple of weeks.  You buy diapers, as well as milk, bread, and other basics.\" -$250.00\n" +
 
-//"You qualify for the BC Early Childhood Tax Benefit of $55 per month and the Canada Child Benefit of $1020 combined for both your children,\"+$1,075.00\"\n"
+////"You qualify for the BC Early Childhood Tax Benefit of $55 per month and the Canada Child Benefit of $1020 combined for both your children,\"+$1,075.00\"\n"
+
 //"Your former spouse is able to give you the rest of his owed child support for the month. +$164.00"
 
 //"Hydro on one bedroom basement suite -$60.00, Hydro on 2 bedroom apartment -$70.00,\n" +
