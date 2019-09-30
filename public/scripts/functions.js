@@ -1,86 +1,104 @@
-var Date = updateDate(initDate);
-var money = 1000;
+var date = 0;
 var index = 0;
+var totalDays = 30;
 
-var initPrompt = intro;
-var initOp1 = op1[0];
-var initOp2 = op2[0];
-
-
+var player = new Player(
+                        /*balance*/ 1000,
+                        /*housing*/ null,
+                        /*carType*/ null,
+                        /*numChildren*/ 2,
+                        /*jobType*/ null
+                        );
 
 function diagInit(){
+    updatePrompt(introNode.promp);
     updateBal(0);
-    document.getElementById("option1").innerHTML = initOp1;
-    document.getElementById("option2").innerHTML = initOp2;
-    document.getElementById("dialog").innerHTML = initPrompt;
-}
-function updatePrompt(text){
-    document.getElementById("dialog").innerHTML = text;
+    updateDate();
+    updateLOption(introNode.lChoice);
+    updateROption(introNode.rChoice);
+
 }
 
-function updateOption1(text) {
-    document.getElementById("option1").innerHTML = text;
+function updatePrompt(node){
+    document.getElementById("dialog").innerHTML = node.promp;
 }
 
-function updateOption2(text) {
-    document.getElementById("option2").innerHTML = text;
+function updateLOption(node) {
+    document.getElementById("lOption").innerHTML = node.lChoice;
+}
+
+function updateROption(node) {
+    document.getElementById("rOption").innerHTML = node.rChoice;
 }
 
 function updateBal(amount) {
-    document.getElementById("balance").innerHTML = "$" + (money + amount);
-    money = money + amount;
+    player.balance = player.balance + amount;
+    document.getElementById("balance").innerHTML = "$" + player.balance;
 }
 
-function updateDate(day){
-    document.getElementById("date").innerHTML = "Day " + day;
+function updateDate(){
+    document.getElementById("date").innerHTML = "Day " + date;
+    date = date + 1;
 }
 
-function changeOp1() {
-    index = index + 1;
-    if (index == 3 || index == 7){
-        accident(accidents, costs);
+
+
+function changeLOp() {
+    updatePrompt(tree[index]);
+    updateBal(tree[index].lCost);
+    updateDate();
+    updateLOption(tree[index]);
+    updateROption(tree[index]);
+    
+    checkLoss();
+    checkWin();
+    
+    if(tree[index * 2 + 1] == null){
+        index = index * 2 + 2;
     }
     else{
-        updatePrompt(prom[index]);
-        updateBal(bal1[index-1]);
-        updateDate(index);
-        updateOption1(op1[index]);
-        updateOption2(op2[index]);
+        index = index * 2 + 1;
     }
-    checkLoss(money);
-    checkWin(Date);
+    
 }
 
-function changeOp2() {
-    index = index + 1;
-    if (index == 3 || index == 7){
-        accident(accidents, costs);
-    }
 
+
+function changeROp() {
+    updatePrompt(tree[index]);
+    updateBal(tree[index].rCost);
+    updateDate();
+    updateLOption(tree[index]);
+    updateROption(tree[index]);
+    
+    checkLoss();
+    checkWin();
+    
+    if(tree[index * 2 + 2] == null){
+        index = index * 2 + 1;
+    }
+    
     else{
-        updatePrompt(prom[index]);
-        updateBal(bal2[index-1]);
-        updateDate(index);
-        updateOption1(op1[index]);
-        updateOption2(op2[index]);
+        index = index * 2 + 2;
     }
-    checkLoss(money);
-    checkWin(Date);
+    
 }
 
-function checkLoss(money){
-    if (money <= 0){
+
+
+function checkLoss(){
+    if (player.balance <= 0){
         end();
         document.getElementById("result").innerHTML = "You Lose!";
-        document.getElementById("enddisc").innerHTML = "Your savings drop below $0 and you fall into debt.<br>Your Savings: $" + money + "<br>Days survived: " + (index + 1);
+        document.getElementById("enddisc").innerHTML = "Your savings drop below $0 and you fall into debt.<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
     }
 }
 
 function checkWin() {
-    if (index + 1 > prom.length-1){
+    if (date > totalDays){
         end();
         document.getElementById("result").innerHTML = "You Win!";
-        document.getElementById("enddisc").innerHTML = "You have made great choices throughout the month and both you and your children survive!<br>Your Savings: $" + money + "<br>Days survived: " + (index + 1);
+        document.getElementById("enddisc").innerHTML = "You have made great choices throughout the month and both you and your children survive!<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
     }
 
 }
