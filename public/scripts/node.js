@@ -84,32 +84,13 @@ Example:        Tree [0] = introNode                                            
                 ......................
 */
 
-var tree = [];
+var tree = [
+            day_0_Job_Selection,
+            
+            day_1_Choosing_Savings, null,
+            
+            day_2_Moving, null, null, null
 
-/*
-function addNodes() {
-    for (i = 1; i < prom.length; i++) {
-        makeNode(i)
-    }
-}
-*/
+            ];
 
-/*
-function makeNode(level, index){
-    node = new Node (prom[index], bal1[index], bal2[index], op1[index], op2[index]);
 
-    tree[level][index] = node;
-}
-*/
-
-function addIntro(){
-    introNode = new Node (intro, bal1[0], bal2[0], op1[0], op2[0]);
-    tree[0] = introNode;
-}
-
-/*
-function makeTree(){
-    addIntro();
-    addNodes();
-}
-*/
