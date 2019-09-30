@@ -60,9 +60,9 @@ Into                        []                                                  
 Choice 1                 []    []               <- This      Translates into ->             [] []
                         / \    / \
 Choice 2               [] []  [] []                                                         [] [] [] []
-                       /\ /\  /\ /\
-                      ..............                                                        [] [] [] [] [] [] [] []
-                                                                                            ........................
+                      /\  /\  /\  /\
+                     [][][][][][][][]                                                       [] [] [] [] [] [] [] []
+                      ..............                                                        ........................
 
 Each node in this tree indicates a branch created by another choice.
 Not all nodes need to be filled in, you can use 'null' to indicate there's no second option/branch which will force the player
@@ -89,11 +89,13 @@ function addNodes() {
 }
 */
 
+/*
 function makeNode(level, index){
     node = new Node (prom[index], bal1[index], bal2[index], op1[index], op2[index]);
 
     tree[level][index] = node;
 }
+*/
 
 function addIntro(){
     introNode = new Node (intro, bal1[0], bal2[0], op1[0], op2[0]);
