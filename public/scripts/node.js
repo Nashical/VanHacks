@@ -1,11 +1,15 @@
 class Node{
-    constructor(promp, lCost, rCost, lChoice, rChoice, result) {
+    constructor(promp, lChoice, lCost, lResult, rChoice, rCost, rResult) {
         this.promp = promp;
+        
+        this.lChoice = lChoice;
         this.lCost = lCost;
+        this.lResult = lResult;
+        
+        this.rChoice = rChoice;
         this.rCost = rCost;
-        this.leftChoice = lChoice;
-        this.rightChoice = rChoice;
-        this.result = result;
+        this.rResult = rResult;
+        
         this.leftChild = null;
         this.rightChild = null;
     }
@@ -22,8 +26,12 @@ class Node{
         return this.rCost;
     }
 
-    getResult(){
-        return this.result;
+    getLResult(){
+        return this.lResult;
+    }
+    
+    getRResult(){
+        return this.rResult;
     }
 
     getLeftChoice(){
