@@ -9,50 +9,9 @@ class Node{
         this.rChoice = rChoice;
         this.rCost = rCost;
         this.rResult = rResult;
-    }
 
-    getPrompt(){
-        return this.promp;
-    }
-
-    getLCost(){
-        return this.lCost;
-    }
-
-    getRCost(){
-        return this.rCost;
-    }
-
-    getLResult(){
-        return this.lResult;
-    }
-    
-    getRResult(){
-        return this.rResult;
-    }
-
-    getLeftChoice(){
-        return this.leftChoice;
-    }
-
-    getRightChoice(){
-        return this.rightChoice;
-    }
-
-    getLeftChild(){
-        return this.leftChild;
-    }
-
-    getRightChild(){
-        return this.rightChild;
-    }
-
-    assignLeft(lChild){
-        this.leftChild = lChild;
-    }
-
-    assignRight(rChild){
-        this.rightChild = rChild;
+        this.leftChild = null;
+        this.rightChild = null;
     }
 }
 
@@ -85,12 +44,9 @@ Example:        Tree [0] = introNode                                            
 */
 
 var tree = [
-            day_0_Job_Selection,
-            
-            day_1_Choosing_Savings, null,
-            
-            day_2_Moving, null, null, null
-
+            day_0_Job_Selection.leftChild = day_1_Choosing_Savings,
+            day_1_Choosing_Savings.leftChild = day_2_Moving,
+            day_2_Moving
             ];
 
 
