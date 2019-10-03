@@ -73,7 +73,7 @@ button:focus {
 }
 
 #game .container{
-    margin-top: 100px;
+    margin-top: 40px;
     z-index: 9;
     text-align: center;
 }
@@ -89,14 +89,14 @@ button:focus {
     max-width: 50%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 10%;
+    margin-bottom: 80px;
 }
 
 #game #game-balance{
     color: #435ef5;
     font-size: 4em;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 #game .game-button{
@@ -131,7 +131,7 @@ button:focus {
 @media only screen and (max-width: 980px ){
 
     #game #game-dialog{
-        font-size: 40px;
+        font-size: 30px;
         max-width: 85%;
         margin: auto;
         margin-top: 20px;
