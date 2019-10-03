@@ -1,238 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    text-align: center;
-}
-
-html, body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'Fredoka One', cursive;
-}
-
-.main{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#startlink{
-    position: absolute;
-    bottom:0%;
-    left:32.5%;
-    width: 35%;
-    height: 20%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
-    text-decoration: none;
-    border: none;
-}
-
-#assets-background{
-    position: absolute;
-    top:0%;
-    left:0%;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#assets-dialog{
-    position: absolute;
-    bottom: 5%;
-    left:10%;
-    width: 80%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#assets-balance{
-    position: absolute;
-    top:3%;
-    right:3%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#assets-date{
-    position: absolute;
-    top:12%;
-    right:3%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#assets-character{
-    display: none;
-    position: absolute;
-    bottom: 0%;
-    left: 3%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#assets-characterdialog{
-    position: absolute;
-    bottom: 0%;
-    left: 40%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-}
-
-#date{
-    position: absolute;
-    top:2.1%;
-    right:5.5%;
-    font-size: 4vw;
-    text-align: center;
-    display: inline-block;
-}
-
-#balance{
-    position: absolute;
-    top:11.5%;
-    right:6%;
-    font-size: 4vw;
-    text-align: center;
-}
-
-#dialog{
-    position: absolute;
-    right:12.5%;
-    bottom: 17%;
-    text-align: center;
-    display: inline-block;
-    width:75%;
+body{
+    background-color: #333333;
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 1.6vw;
+    color: #b7c2db;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-
-#result{
-    position: absolute;
-    right:29%;
-    top: 8%;
+/* Startup */
+#startup .container{
+    margin-top: 20%;
+    z-index: 10;
     text-align: center;
-    display: none;
-    width:45%;
-    font-family: 'Indie Flower', cursive;
-    color: white;
-    font-size: 3vw;
 }
 
-#enddisc{
-    position: absolute;
-    right:29%;
-    top: 16%;
-    text-align: center;
-    display: none;
-    width:45%;
-    font-family: 'Indie Flower', cursive;
-    color: white;
-    font-size: 1.6vw;
-}
-
-#endbg{
-    display:none;
-    position: absolute;
-    top:0%;
-    left:0%;
+#startup #startup-message{
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.4;
     width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    max-width: 85%;
 }
 
-
-
-#startbg{
-    position: absolute;
-    top:0%;
-    left:0%;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
+#startup #startup-text{
+    color: #435ef5;
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
 }
 
-
-#startbutton{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: 100%;
-    top: 0%;
-    left: 0%;
-    color: rgba(0,0,0,0);
-    background-color: rgba(0,0,0,0);
-    text-decoration: none;
+#startup #startup-start{
+    background-color: #202020;
+    color: #9ab1f3;
+    font-size: 60px;
     border: none;
-}
-
-
-/* Buttons */
-
-/*
-#dialog-button{
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 155px;
-    font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    background-color: rgba(195,60,60,0.7);
-    border: none;
-    color: white;
-    font-size: 1.2vw;
-    padding:0.5vw;
-    bottom: 5%;
-}
-*/
-
-
-.option-button button{
-
-    position: absolute;
-    left: 30%;
-    width: 60%;
-    height: 100px;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    background-color: rgba(195,60,60,0.7);
-    border: none;
-    color: white;
-    font-size: 1.2vw;
-    padding:0.5vw;
+    padding: 20px 40px;
+    border-radius: 8px;
 }
 
-#option1{
-    top: 30%;
-}
-
-#option2{
-    top: 50%;
+.vertical-center .center{
+    display: inline-block;
+    vertical-align: center;
+    
 }
 
 
+  @media only screen and (max-width: 980px){
+
+    /* Startup (Mobile) */
+    #startup .container{
+        margin-top: 40%;
+        z-index: 10;
+        text-align: center;
+    }
+
+}
