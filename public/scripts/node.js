@@ -52,10 +52,11 @@ go indefinitely!
 For example, You can make the choices point to one another, so the overall branch/path of the story is circular.
 Or you can make only one node, for each day leading the story to be linear
 The possiblities are endless.
-
 */
 
 function makeTree(){
+    introNode.leftChild = day_0_Job_Selection;
+    
     day_0_Job_Selection.leftChild = day_1_Choosing_Savings;
     
     day_1_Choosing_Savings.leftChild = day_2_Moving;
