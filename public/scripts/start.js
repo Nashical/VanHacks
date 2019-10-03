@@ -1,6 +1,10 @@
 function start() {
   document.getElementById("startup").style.display = "none";
   document.getElementById("game").style.display = "block";
+  
+  makeTree();
+  diagInit();
+  
   /*If you need to use button to start game with another file use this code and remove line above
 
   function(){}
