@@ -32,7 +32,7 @@ function updateROption(node) {
 
 function updateBal(amount) {
     player.balance = player.balance + amount;
-    document.getElementById("game-balance").innerHTML = "Balance: $" + player.balance;
+    document.getElementById("game-balance").innerHTML = "Balance: $" + player.balance.toString();
 }
 
 function updateDate(){
@@ -43,6 +43,9 @@ function updateDate(){
 
 
 function changeLOp() {
+  
+    updateBal(currentNode.lCost);
+  
     if(currentNode.leftChild == null){
         if(currentNode.rightChild == null){
             return result
@@ -58,7 +61,6 @@ function changeLOp() {
     }  
   
     updatePrompt(currentNode);
-    updateBal(currentNode.lCost);
     updateDate();
     updateLOption(currentNode);
     updateROption(currentNode);
@@ -70,6 +72,9 @@ function changeLOp() {
 
 
 function changeROp() {
+  
+    updateBal(currentNode.rCost);
+  
     if(currentNode.rightChild == null){
         if (currentNode.leftChild == null){
             return result
@@ -85,7 +90,6 @@ function changeROp() {
     }
   
     updatePrompt(currentNode);
-    updateBal(currentNode.rCost);
     updateDate();
     updateLOption(currentNode);
     updateROption(currentNode);
