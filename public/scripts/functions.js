@@ -1,5 +1,4 @@
 var date = 0;
-var index = 0;
 var totalDays = 30;
 
 var player = new Player(
@@ -9,6 +8,10 @@ var player = new Player(
                         /*numChildren*/ 2,
                         /*jobType*/ null
                         );
+
+
+var index = 0;
+var currentNode = introNode;
 
 function diagInit(){
     updatePrompt(introNode.promp);
