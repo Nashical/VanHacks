@@ -24,7 +24,7 @@
             <!-- Currently referencing the playspent design as starter-->
             <div id="startup" class="vertical-center fullscreen active visible">
                 <div class="container center">
-                    <h3 id="startup-message">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.</h3>
+                    <!-- CHANGE THIS TO ICON <h3 id="startup-message"></h3> -->
                     <h2 id="startup-text">Food Bank Challenge</h2>
                     <button id="startup-start" onclick="start()">Start</button>
                 </div>
@@ -33,14 +33,14 @@
             <div id="game" class="vertical-bottom fullscreen active visible">
                 <button id="exit" onclick="end()">Exit</button>
                 <div class="container">
-                        <h3  id="game-date">Day 1</h3>
-                        <p id="game-dialog">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds. You can either go buy $50 in lottery tickets in a chance to win a lot of money or save up for your kids</p>
-                        <h2 id="game-balance">Balance: $1000</h2>
+                        <h3  id="game-date">Day 0</h3>
+                        <p id="game-dialog">blank</p>
+                        <h2 id="game-balance">Balance: $0</h2>
                 </div>
 
                 <div class="button">
-                    <button id="lOption" class="game-button game-text" onclick="changeLOp()">Save for the kids ($50+)</button>
-                    <button id="rOption" class="game-button game-text" onclick="changeROp()">Spend money on lotto 6/49 (-$20)</button>
+                    <button id="topOption" class="game-button game-text" onclick="changeLOp()">empty</button>
+                    <button id="bottomOption" class="game-button game-text" onclick="changeROp()">empty</button>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
 
             <div id="ending">
                     <h2 id="ending-result">Result</h2>
-                    <p id="ending-dialog">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.</p>
+                    <p id="ending-dialog">empty</p>
             </div>
 
             <script type="text/javascript" src="scripts/start.js"></script>
