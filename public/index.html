@@ -11,58 +11,49 @@
         <div class="main">
 
             <!-- Main Game -->
-<!--
-            <div class="assets">
+<!--        
+           
 
-                    <img id="assets-background" src="./assets/b_background.png">
-                    <img id="assets-character" src="./assets/b_character.png">
-                    <img id="assets-characterdialog" src="./assets/b_character.png">
-                    <img id="assets-dialog" src="./assets/b_dialog.png">
-                    <img id="assets-balance" src="./assets/b_balance.png">
-                    <img id="assets-date" src="./assets/b_date.png">
-
-                    
-
-                    <img id="background-main" src="./assets/bg0.png">
-                    <img id="background-main" src="./assets/bg0.png">
-
-                    
-            </div>
-
-            <div class="text">
-                    <p id="date">0</p>
-                    <p id="balance">$0</p>
-                    <p id="dialog">empty</p>
-            </div>
+            
 
 
             <button onclick="dialog()" id="dialog-button">Test Button for dialog</button>
 
-
-            <div class="option-button">
-                    <button onclick="changeOp1()" id="option1">Test 1</button>
-                    <button onclick="changeOp2()" id="option2">Test 2</button>
-            </div>
--->
+-->         
             <!-- Start Game -->
             <!-- Currently referencing the playspent design as starter-->
-            <div id="startup" class="startup vertical-center fullscreen active visible">
+            <div id="startup" class="vertical-center fullscreen active visible">
                 <div class="container center">
                     <h3 id="startup-message">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.</h3>
                     <h2 id="startup-text">Food Bank Challenge</h2>
-                    <button id="startup-start">Start</button>
+                    <button id="startup-start" onclick="start()">Start</button>
+                </div>
+            </div>
+
+            <div id="game" class="vertical-bottom fullscreen active visible">
+                <button id="exit" onclick="end()">Exit</button>
+                <div class="container">
+                        <h3  id="game-date">Day 1</h3>
+                        <p id="game-dialog">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds. You can either go buy $50 in lottery tickets in a chance to win a lot of money or save up for your kids</p>
+                        <h2 id="game-balance">Balance: $1000</h2>
+                </div>
+
+                <div class="button">
+                    <button id="opt1" class="game-button game-text" onclick="gameButton1()">Save for the kids ($50+)</button>
+                    <button id="opt2" class="game-button game-text" onclick="gameButton2()">Spend money on lotto 6/49 (-$20)</button>
                 </div>
             </div>
 
 
             <!-- End Game -->
-<!--
-            <div class="end">
-                    <img id="endbg" src="./assets/End.png">
-                    <h2 id="result">Result</h2>
-                    <p id="enddisc">Disc</p>
+
+            <div id="ending">
+                    <h2 id="ending-result">Result</h2>
+                    <p id="ending-dialog">You are a single parent with two children, 8 months and 6 years old.  You are recently separated from your spouse who works a full time minimum wage job and regularly pays less than his court ordered child maintenance due to lack of funds.</p>
             </div>
--->
+
+            <script type="text/javascript" src="scripts/start.js"></script>
+            <script type="text/javascript" src="scripts/end.js"></script>
         </div>
     </body>
 
@@ -70,7 +61,7 @@
     <footer>
         <script type="text/javascript" src="scripts/dialog.js"></script>
         <script type="text/javascript" src="scripts/functions.js"></script>
-        <script type="text/javascript" src="scripts/start.js"></script>
+        
     </footer>
 -->
 </html>

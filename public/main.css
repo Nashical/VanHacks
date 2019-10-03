@@ -9,7 +9,15 @@ body{
     overflow-y: hidden;
 }
 
+button:focus { 
+    outline:0;
+}
+
 /* Startup */
+#startup{
+    display: block;
+}
+
 #startup .container{
     margin-top: 20%;
     z-index: 10;
@@ -40,7 +48,7 @@ body{
     border: none;
     text-decoration: none;
     padding: 20px 40px;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .vertical-center .center{
@@ -49,14 +57,113 @@ body{
     
 }
 
+/* Startup (Mobile) */
+@media only screen and (max-width: 980px){
 
-  @media only screen and (max-width: 980px){
-
-    /* Startup (Mobile) */
     #startup .container{
         margin-top: 40%;
         z-index: 10;
         text-align: center;
     }
 
+}
+
+/* Game */
+
+#game{
+    display: none;
+}
+
+#game .container{
+    margin-top: 100px;
+    z-index: 9;
+    text-align: center;
+}
+
+#game #game-date{
+    color: #435ef5;
+    font-size: 3em;
+    margin: auto;
+}
+
+#game #game-dialog{
+    font-size: 2em;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+#game #game-balance{
+    color: #435ef5;
+    font-size: 4em;
+    margin: auto;
+    margin-bottom: 200px;
+}
+
+#game .game-button{
+    display: block;
+    background-color: #202020;
+    color: #9ab1f3;
+    font-size: 40px;
+    border: none;
+    text-decoration: none;
+    width: 800px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#game #exit{
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    display: block;
+    background-color: #202020;
+    color: #c53e3e;
+    font-size: 30px;
+    border: none;
+    text-decoration: none;
+    padding: 30px 50px;
+    border-radius: 12px;
+}
+
+/* Game (Mobile) */
+@media only screen and (max-width: 980px ){
+
+    #game #game-dialog{
+        font-size: 40px;
+        max-width: 85%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20%;
+    }
+
+    #game .game-button{
+        padding: 50px 40px;
+    }
+
+}
+
+#ending{
+    display: none;
+    margin-top: 100px;
+    z-index: 9;
+    text-align: center;
+}
+
+#ending #ending-result{
+    color: #435ef5;
+    font-size: 4em;
+    margin: auto;
+    margin-bottom: 200px;
+}
+
+#ending #ending-dialog{
+    font-size: 2em;
+    max-width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10%;
 }
