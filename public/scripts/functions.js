@@ -9,82 +9,89 @@ var player = new Player(
                         /*jobType*/ null
                         );
 
-
-var index = 0;
 var currentNode = introNode;
 
 function diagInit(){
-    updatePrompt(introNode.promp);
+    updatePrompt(currentNode);
     updateBal(0);
-    updateDate();
-    updateLOption(introNode.lChoice);
-    updateROption(introNode.rChoice);
-
+    updateLOption(currentNode);
+    updateROption(currentNode);
 }
 
 function updatePrompt(node){
-    document.getElementById("dialog").innerHTML = node.promp;
+    document.getElementById("game-dialog").innerHTML = node.promp;
 }
 
 function updateLOption(node) {
-    document.getElementById("lOption").innerHTML = node.lChoice;
+    document.getElementById("topOption").innerHTML = node.lChoice;
 }
 
 function updateROption(node) {
-    document.getElementById("rOption").innerHTML = node.rChoice;
+    document.getElementById("bottomOption").innerHTML = node.rChoice;
 }
 
 function updateBal(amount) {
     player.balance = player.balance + amount;
-    document.getElementById("balance").innerHTML = "$" + player.balance;
+    document.getElementById("game-balance").innerHTML = "Balance: $" + player.balance;
 }
 
 function updateDate(){
-    document.getElementById("date").innerHTML = "Day " + date;
+    document.getElementById("game-date").innerHTML = "Day " + date;
     date = date + 1;
 }
 
 
 
 function changeLOp() {
-    updatePrompt(tree[index]);
-    updateBal(tree[index].lCost);
+    if(currentNode.leftChild == null){
+        if(currentNode.rightChild == null){
+            return result
+        }
+      
+        else{
+            currentNode = currentNode.rightChild;
+        }
+    }
+  
+    else{
+        currentNode = currentNode.leftChild;
+    }  
+  
+    updatePrompt(currentNode);
+    updateBal(currentNode.lCost);
     updateDate();
-    updateLOption(tree[index]);
-    updateROption(tree[index]);
+    updateLOption(currentNode);
+    updateROption(currentNode);
     
     checkLoss();
     checkWin();
-    
-    if(tree[index * 2 + 1] == null){
-        index = index * 2 + 2;
-    }
-    else{
-        index = index * 2 + 1;
-    }
-    
 }
 
 
 
 function changeROp() {
-    updatePrompt(tree[index]);
-    updateBal(tree[index].rCost);
+    if(currentNode.rightChild == null){
+        if (currentNode.leftChild == null){
+            return result
+        }
+      
+        else{
+            currentNode = currentNode.leftChild;
+        }
+    }
+  
+    else{
+        currentNode = currentNode.rightChild;
+    }
+  
+    updatePrompt(currentNode);
+    updateBal(currentNode.rCost);
     updateDate();
-    updateLOption(tree[index]);
-    updateROption(tree[index]);
+    updateLOption(currentNode);
+    updateROption(currentNode);
     
     checkLoss();
-    checkWin();
-    
-    if(tree[index * 2 + 2] == null){
-        index = index * 2 + 1;
-    }
-    
-    else{
-        index = index * 2 + 2;
-    }
-    
+    checkWin(); 
 }
 
 
@@ -92,16 +99,16 @@ function changeROp() {
 function checkLoss(){
     if (player.balance <= 0){
         end();
-        document.getElementById("result").innerHTML = "You Lose!";
-        document.getElementById("enddisc").innerHTML = "Your savings drop below $0 and you fall into debt.<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
+        document.getElementById("ending-result").innerHTML = "You Lose!";
+        document.getElementById("ending-dialog").innerHTML = "Your savings drop below $0 and you fall into debt.<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
     }
 }
 
 function checkWin() {
     if (date > totalDays){
         end();
-        document.getElementById("result").innerHTML = "You Win!";
-        document.getElementById("enddisc").innerHTML = "You have made great choices throughout the month and both you and your children survive!<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
+        document.getElementById("ending-result").innerHTML = "You Win!";
+        document.getElementById("ending-dialog").innerHTML = "You have made great choices throughout the month and both you and your children survive!<br>Your Savings: $" + player.balance + "<br>Days survived: " + date;
     }
 
 }
